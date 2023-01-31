@@ -25,8 +25,13 @@
       <!--Main Navigation-->
   <header>
     <style>
-      html {
-        background-color: #000000;
+      .navbar-toggler {
+color:white;
+      }
+
+      .navbar-brand {
+        color: white;
+        font-weight: bold;
       }
       /* Carousel styling */
       #introCarousel,
@@ -37,26 +42,54 @@
       }
 
       .carousel-item:nth-child(1) {
-        background-image: url('img/hero.jpeg');
+        background-image: url('img/hero.webp');
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        background-size:contain;
+        background-position: center;
+        background-color: #000000;
       }
+
+      html {
+        background-color:#000000;
+        background-size:contain;
+        background-position: center;
+      }
+
       /* Height for devices larger than 576px */
-      @media (min-width: 992px) {
+      @media (min-width: 1280px) {
         #introCarousel {
           margin-top: -58.59px;
+        }
+        .carousel-item:nth-child(1) {
+          background-size:100%;
+        }
+
+        .fixed-top {
+          display:none;
         }
       }
 
       .navbar .nav-link {
         color: #fff !important;
       }
+
+      @media (max-width: 1280px) {
+        .fixed-bottom {
+          display: none;
+        }
+
+        .nav-link,.nav-item {
+          display:none;
+        }
+
+
+        .carousel-item:nth-child(1) {
+          background-size:100%;
+        }
+        
+        }
+
     </style>
-  <footer>
-
-  </footer>
-
     <!-- Carousel wrapper -->
     <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
       <!-- Inner -->
@@ -67,21 +100,58 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
                 <h1>BlackZyme</h1>
-                <h5 >Coming Soon.</h5>
+                <h5>Coming Soon.</h5>
               </div>
             </div>
           </div>
         </div>
     <!-- Carousel wrapper -->
   </header> 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-link fixed-bottom" style="background-color:#000000;">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-link navbar-light fixed-bottom">
   <!-- Container wrapper -->
   <div class="container-fluid">
 
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html">BZ</a>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+      </ul>
+
+      <!-- Icons -->
+      <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<!-- Navbar Top-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#000000;">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html">BZ</a>
+
     <!-- Toggle button -->
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-plus"></i>
     </button>
 
     <!-- Collapsible wrapper -->
@@ -92,28 +162,16 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
 
       </ul>
 
       <!-- Icons -->
       <ul class="navbar-nav d-flex flex-row me-1">
         <li class="nav-item me-3 me-lg-0">
-          <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
         </li>
         <li class="nav-item me-3 me-lg-0">
-          <a class="nav-link" href="#"><i class="fab fa-linkedin"></i></a>
+          <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
         </li>
       </ul>
 
@@ -122,7 +180,7 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-    <!-- MDB -->
+ <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/script.js"></script>
